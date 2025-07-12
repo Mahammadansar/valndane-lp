@@ -90,20 +90,6 @@
                     <div class="spacer-double"></div>
 
                     <div class="row g-4 align-items-center justify-content-between">
-                        <!-- <div class="col-md-5">
-                            <h2 class="mb-0">The safest investment on earth is real estate, when invested in
-                                intelligently</h2>
-                            <span>Your Premier Partner in Dubai's Property Market</span>
-                        </div> -->
-
-                        <!-- <div class="col-lg-4">
-                            <h4 class="fw-400">A Legacy of Trust, Built on Results</h4>
-                            <a class="btn-main btn-line bg-blur fx-slide whatsappBtn" id="whatsappBtn1"
-                                data-agent="Nardos" data-phone="+971551462613"><span>Schedule a
-                                    Visit</span></a>&nbsp;
-                            <a class="btn-main btn-line bg-blur fx-slide" href="#section-overview"><span>Explore
-                                    Property</span></a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -148,53 +134,16 @@
                 </div>
             </div>
             <div class="vertical-center">
-                <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="swiper-inner"
-                                data-bgimage="url(https://c4.wallpaperflare.com/wallpaper/460/214/494/city-dubai-cityscape-blue-wallpaper-preview.jpg)">
-                                <div class="sw-overlay op-4"></div>
-                            </div>
-                        </div>
-
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="swiper-inner"
-                                data-bgimage="url(https://c4.wallpaperflare.com/wallpaper/460/214/494/city-dubai-cityscape-blue-wallpaper-preview.jpg)">
-                                <div class="sw-overlay op-4"></div>
-                            </div>
-                        </div>
-
-
-                    </div>
-
+                <div class="video-container">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="video-new.mp4" type="video/mp4">
+                        <source src="your-video-file.webm" type="video/webm">
+                        <!-- Fallback background image if video doesn't load -->
+                        <div class="video-fallback" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/460/214/494/city-dubai-cityscape-blue-wallpaper-preview.jpg);"></div>
+                    </video>
+                    <div class="video-overlay op-4"></div>
                 </div>
             </div>
-
-            <!-- <div class="abs w-100 bottom-0 z-2 pb-4 sm-hide">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h6>Spacious Rooms</h6>
-                                </div>
-                                <div>
-                                    <h6>Private Garden</h6>
-                                </div>
-                                <div>
-                                    <h6>Walk-in Closets</h6>
-                                </div>
-                                <div>
-                                    <h6>Swimming Pool</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </section>
         <section id="section-overview" class="py-5 bg-light no-bottom">
             <div class="container">
@@ -202,7 +151,7 @@
                 <div class="row gx-5">
                     <!-- Image -->
                     <div class="col-lg-6 position-lg-absolute top right-half  overflow-hidden">
-                        <img src="dp.png" width="100%">
+                        <img src="valdane.jpg" width="100%">
                     </div>
                     <!-- Text -->
                     <div class="col-lg-6 relative z-3">
@@ -513,7 +462,7 @@
                     <div class="col-lg-6">
                         <div class="relative">
                             <div class="w-100 wow scaleIn">
-                                <img src="images/misc/l1.webp" class="w-100 rounded-1" alt="">
+                                <img src="client.webp" class="w-100 rounded-1" alt="">
                             </div>
                         </div>
                     </div>
@@ -1027,6 +976,52 @@
         .whatsappBtn,
         .callBtn {
             cursor: pointer;
+        }
+
+        /* Video Styles */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 2;
+        }
+
+        .video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+
+        /* Ensure content above video is visible */
+        .vertical-center {
+            position: relative;
+            z-index: 3;
         }
     </style>
 
